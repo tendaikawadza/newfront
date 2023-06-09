@@ -10,6 +10,7 @@ button { margin: 0px 10px;
    align-items:center;
    flex-wrap: wrap;
    height: 50vh;
+   gap:15px;
 
   }
 button {
@@ -35,80 +36,6 @@ button {
   width: 25%;
 }
 
-::ng-deep .ui-steps.steps-custom {
-  margin-bottom: 30px;
-}
-
-::ng-deep .ui-steps.steps-custom .ui-steps-item .ui-menuitem-link {
-  padding: 0 1em;
-  overflow: visible;
-}
-
-::ng-deep .ui-steps.steps-custom .ui-steps-item .ui-steps-number {
-  background-color: #0081c2;
-  color: #FFFFFF;
-  display: inline-block;
-  width: 36px;
-  border-radius: 50%;
-  margin-top: -14px;
-  margin-bottom: 10px;
-}
-::ng-deep .ui-steps.steps-custom .ui-steps-item .ui-steps-title {
-  color: #555555;
-}
-::ng-deep .p-card .p-card-footer {
-  padding: 1.25rem 0 0 0;
-}
-::ng-deep .justify-content-between {
-  justify-content: space-between!important; 
-    display: flex !important;
-}
-::ng-deep .grid-nogutter {
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 0;
-
-}
-::ng-deep .justify-content-between {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-::ng-deep .grid-nogutter {
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 0;
-}
-::ng-deep .grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-::ng-deep .justify-content-between button:nth-child(1){
-  display: flex;
-  flex: 1;
-}
-
-
-#footer-btn, .contentcenter{
-  justify-content: center;
-}
-
-#footer-btn > button {
-  width: 178.09px;
-  height: 41.7px;
-}
-
-.max-h-200{
-max-height: 200px !important;
-height: 200px !important;
-overflow-y:  auto;
-overflow-x: auto;
-padding: 10px;
-}
-
-
 .icon{cursor: pointer;margin-right: 50px;line-height: 60px}
 .icon span{background: #f00;padding: 7px;border-radius: 50%;color: #fff;vertical-align: top;margin-left: -25px}
 .icon img{display: inline-block;width: 26px;margin-top: 4px}
@@ -122,3 +49,241 @@ padding: 10px;
 .notifications-item img{display: block;width: 50px;height: 50px;margin-right: 9px;border-radius: 50%;margin-top: 2px}
 .notifications-item .text h4{color: #777;font-size: 16px;margin-top: 3px}
 .notifications-item .text p{color: #aaa;font-size: 12px}
+
+
+.card {
+  width: 200px;
+  height: 250px;
+  background-color: #119304;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color:white;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 16px;
+  position: sticky;
+
+  top: 74px;
+}
+
+.card-details h3 {
+  margin: 0;
+}
+
+.glow-on-hover {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:#f59e0b;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+#sidebar {
+  width: 250px;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+#content {
+  margin-left: 250px;
+  padding: 20px;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+article
+{
+	position: fixed;
+	width: max-content;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30px 15%;
+	background-color: #fff;
+	overflow: auto;
+	z-index: 0;
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+}
+
+
+article:after
+{
+	position: absolute;
+	content: ' ';
+	left: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+/*	background-image: -webkit-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -moz-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -ms-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: -o-linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	background-image: linear-gradient(right, rgba(0,0,0,0.2) 0%, transparent 100%);
+	pointer-events: none;*/
+}
+
+nav
+{
+	position: fixed;
+	left: -16em;
+	top: 0;
+	bottom: 0;
+	background-color: #bada55;
+	border-right: 50px solid #bada55;
+	/*box-shadow: 4px 0 5px rgba(0,0,0,0.2);*/
+	z-index: 1;
+	cursor: pointer;
+}
+
+nav:after
+{
+	position: absolute;
+	content: ' ';
+	width: 0;
+	height: 0;
+	right: -70px;
+	top: 50%;
+	border-width: 15px 10px;
+	border-style: solid;
+	border-color: transparent transparent transparent #bada55;
+}
+
+nav ul
+{
+	width: 14em;
+	list-style-type: none;
+	margin: 0;
+	padding: 1em;
+}
+
+nav a:link, nav a:visited
+{
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	line-height: 2.5em;
+	text-indent: 10px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 4px;
+	outline: 0 none;
+}
+
+nav a:hover, nav a:focus
+{
+	color: #fff;
+	background-color: darken(#bada55, 20%);
+	text-shadow: 0 0 4px #fff;
+	box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+}
+
+/* hovering */
+article, article:after, nav, nav *
+{
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	transition: all 600ms ease;
+}
+
+nav:hover
+{
+	left: 0;
+}
+
+nav:hover ~ article
+{
+	-webkit-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-moz-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-ms-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	-o-transform: translateX(16em) perspective(600px) rotateY(10deg);
+	transform: translateX(16em) perspective(600px) rotateY(10deg);
+}
+
+nav:hover ~ article:after
+{
+	left: 60%;
+}
+
+/* typography */
+footer
+{
+	margin-top: 2em;
+	border-top: 1px dotted #999;
+}

@@ -48,7 +48,7 @@ import { CardModule, } from 'primeng/card';
 import { RequastComponent } from './requast/requast.component';
 import { AuthenticationService } from './service/authentication.service';
 
-
+import { SidebarModule } from 'primeng/sidebar';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
@@ -108,7 +108,8 @@ LoginComponent,
     InputNumberModule,
     ConfirmDialogModule,
     InputTextareaModule,
-    FormsModule 
+    FormsModule,
+    SidebarModule
 
 
 
